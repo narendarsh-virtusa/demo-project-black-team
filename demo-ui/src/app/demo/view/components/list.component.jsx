@@ -12,7 +12,7 @@ export class ListComponent extends React.Component {
 		super(props);
 		this.state = {
 			employeeList: [],
-			id: ''
+			name: ''
 		};
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);

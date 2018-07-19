@@ -12,7 +12,7 @@ export class FindComponent extends React.Component {
 		super(props);
 		this.state = {
 			employeeObj: {
-				id: '',
+				id: null,
 				name: '',
 				firstName: '',
 				lastName: ''
@@ -29,12 +29,13 @@ export class FindComponent extends React.Component {
 	}
 	/** Call each time stor disptach called **/
 	componentWillReceiveProps(nextProps) {
-		console.log('componentWillReceiveProps')
+		
 		const {employee} = nextProps;
-		if (nextProps.uesr !== []) {
+		if (nextProps.employee !== []) {
 			this.setState({employeeObj: employee});
 		}
-		if (this.state.employeeObj.id === '') {
+		
+		if (employee.id) {
 			this.setState({error: true});
 			this.setState({deleted: false});
 		}
