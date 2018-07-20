@@ -2,13 +2,6 @@
 Demo Service Application
 ```
 
-### Assumption Made ###
-
-```
-* 
-*
-```
-
 ### Technology Used ###
 * TECH - EXPRESSJS, NODEJS, CASSENDRA DB, REST 
 * REPO - GIT
@@ -31,8 +24,8 @@ npm install
 * Run development server:
 
 ```
-node generate.js
-node employee.service.js
+* node generate.js
+* node employee.service.js
 
 
 ```
