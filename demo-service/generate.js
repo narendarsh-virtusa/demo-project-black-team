@@ -8,6 +8,9 @@ var corsOptions = {
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 
+var cassandraHost = process.env.CASSANDRA_HOST || '127.0.0.1';
+console.log('cassandraHost:', cassandraHost);
+
 var debug = require('debug')('http')
   , name = 'Lloyds POC';
 
@@ -15,7 +18,7 @@ var debug = require('debug')('http')
 var app = express();
 models.setDirectory(__dirname + '/models').bind({
   clientOptions: {
-    contactPoints: ['127.0.0.1'],
+    contactPoints: [cassandraHost.toString()],
     protocolOptions: {
       port: 9042
     },
